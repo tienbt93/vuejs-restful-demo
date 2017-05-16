@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>axios - get example</title>
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    
+</head>
+
+<body>
+    <template>
+        <ul v-if="contacts && contacts.length">
+            <li v-for="contact of contacts">
+                <p><strong>{{contact.name}}</strong></p>
+                <p>{{contact.email}}</p>
+            </li>
+        </ul>
+        <!--
+  <ul v-if="errors && errors.length">
+    <li v-for="error of errors">
+      {{error.message}}
+    </li>
+  </ul>-->
+    </template>
+
+    <script>
+        // import axios from 'axios';
+
+        // export default {
+        //     data: () => ({
+        //         contacts: []
+        //     }),
+
+            // Fetches posts when the component is created.
+            // created() {
+                axios.get(`http://localhost:8080/contact/list`)
+                    .then(response => {
+                        // JSON responses are automatically parsed.
+                        console.log('loading');
+                        this.contacts = response.data
+                    });
+                // .catch(e => {
+                //   this.errors.push(e)
+                // })
+            // }
+        // }
+
+    </script>
+    <script src="js/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.17/vue.js"></script>
+</body>
+
+</html>

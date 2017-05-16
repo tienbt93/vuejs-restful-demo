@@ -1,0 +1,15 @@
+{
+  "name": "vuejs-restful-demo",
+  "version": "1.0.0",
+  "description": "demo ",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.16.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tien.bt",
+  "license": "ISC"
+}
